@@ -1,0 +1,55 @@
+# depslib dependency file v1.0
+1559272067 source:f:\cpptest\quick_sort\quick_sort\src\datagenerator.cpp
+	"DataGenerator.h"
+
+1559695842 f:\cpptest\quick_sort\quick_sort\include\datagenerator.h
+	<vector>
+	<random>
+
+1559663840 source:f:\cpptest\quick_sort\quick_sort\main.cpp
+	<iostream>
+	"DataGenerator.h"
+	"Sorter.h"
+	"utils.h"
+	"timeit.h"
+	"ThreadPool.h"
+
+1559663732 f:\cpptest\quick_sort\quick_sort\include\sorter.h
+	<atomic>
+	<chrono>
+	<condition_variable>
+	<future>
+	<iostream>
+	<list>
+	<mutex>
+	"utils.h"
+
+1559273787 source:f:\cpptest\quick_sort\quick_sort\src\sorter.cpp
+	<iterator>
+	"Sorter.h"
+
+1559480433 f:\cpptest\quick_sort\quick_sort\include\utils.h
+	<chrono>
+	<iomanip>
+	<iostream>
+	<list>
+	<mutex>
+	<sstream>
+	<thread>
+
+1559392455 f:\cpptest\quick_sort\quick_sort\include\threadpool.h
+	<atomic>
+	<functional>
+	<future>
+	<mutex>
+	<list>
+	<vector>
+	"utils.h"
+
+1559660997 f:\cpptest\quick_sort\quick_sort\include\timeit.h
+	<stdio.h>
+	<stdint.h>
+	<string.h>
+	<time.h>
+	<windows.h>
+
