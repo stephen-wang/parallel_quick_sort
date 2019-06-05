@@ -1,6 +1,6 @@
 # <p style="text-align: center;">paralllel\_quick_sort</P>
 
-parallel\_quick_sort (provided by Sorter::parallel_quick_sort()) is the mutli\-threaded version implementation of traditional quick sort algorithm.The following test results is based on  [ctimeit](https://github.com/stephen-wang/ctimeit):<br> 
+parallel\_quick_sort (provided by Sorter::parallel_quick_sort()) is the multi\-threaded version implementation of traditional quick sort algorithm.The following test results is based on  [ctimeit](https://github.com/stephen-wang/ctimeit):<br> 
 
 ```
 Parallel Sorting: data num <1000000>, thread num <4>, parallel_gate <5000>,  time consumption avg: 1s529ms245us (1529245000 ns)<br>
