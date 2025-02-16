@@ -24,23 +24,23 @@ void get_desc_time(uint64_t ns, char *buf, int len)
 
 	memset(buf, '\0', len);
 	if (seconds > 0) {
-		snprintf(buf+strlen(buf), len-strlen(buf), "%lus", seconds);
+		snprintf(buf+strlen(buf), len-strlen(buf), "%llus", seconds);
 	}
 
 	if (millis > 0) {
-		snprintf(buf+strlen(buf), len-strlen(buf), "%lums", millis);
+		snprintf(buf+strlen(buf), len-strlen(buf), "%llums", millis);
 	}
 
 	if (micros > 0) {
-		snprintf(buf+strlen(buf), len-strlen(buf), "%luus", micros);
+		snprintf(buf+strlen(buf), len-strlen(buf), "%lluus", micros);
 	}
 
 	if (nanos > 0) {
-		snprintf(buf+strlen(buf), len-strlen(buf), "%luns", nanos);
+		snprintf(buf+strlen(buf), len-strlen(buf), "%lluns", nanos);
 	}
 }
 
-#if defined(linux)
+#if defined(__linux__) || defined(__APPLE__)
 #include <time.h>    // for clock_gettime
 
 #define timeit(n, func, ...) do {                                           \
@@ -49,7 +49,7 @@ void get_desc_time(uint64_t ns, char *buf, int len)
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &start);                        \
                                                                             \
     for (int i=0; i<n; i++) {                                               \
-		func(__VA_ARGS__);                                                  \
+        func(__VA_ARGS__);                                                  \
     }                                                                       \
                                                                             \
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &end);                          \
@@ -62,7 +62,7 @@ void get_desc_time(uint64_t ns, char *buf, int len)
     if (n > 1) {                                                            \
         printf("%d loops, %s, avg: %s per loop\n", n, strSpan, strAvgSpan); \
     } else {                                                                \
-        printf("avg: %s (%lu ns)\n", strAvgSpan, duration);                 \
+        printf("avg: %s (%llu ns)\n", strAvgSpan, duration);                \
     }                                                                       \
 } while (0)
 

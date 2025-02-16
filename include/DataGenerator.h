@@ -13,7 +13,7 @@
 class DataGenerator
 {
 public:
-    DataGenerator(int min_, int max_, int seed=std::random_device{}()):
+    DataGenerator(int min_, int max_, unsigned int seed=std::random_device{}()):
         gen_{seed}, dist_{min_, max_} {}
     DataGenerator(const DataGenerator &) = delete;
     DataGenerator(DataGenerator &&) = delete;

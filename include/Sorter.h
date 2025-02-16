@@ -22,8 +22,6 @@
 #include <list>
 #include <mutex>
 
-#include "utils.h"
-
 using namespace std::chrono_literals;
 
 class Sorter{

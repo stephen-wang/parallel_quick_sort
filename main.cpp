@@ -2,7 +2,6 @@
 
 #include "DataGenerator.h"
 #include "Sorter.h"
-#include "utils.h"
 
 extern "C" {
     #include "timeit.h"
